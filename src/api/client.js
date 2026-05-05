@@ -1,5 +1,5 @@
 ﻿import axios from "axios";
-const api = axios.create({ baseURL: "http://localhost:8000" });
+const api = axios.create({ baseURL: "https://bolivia-bus-backend.onrender.com" });
 api.interceptors.request.use(cfg => {
   const token = localStorage.getItem("dev_token");
   if (token) cfg.headers.Authorization = `Bearer ${token}`;
@@ -14,3 +14,4 @@ api.interceptors.response.use(r => r, err => {
   return Promise.reject(err);
 });
 export default api;
+
