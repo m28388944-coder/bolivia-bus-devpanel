@@ -1,6 +1,6 @@
 ﻿import { useState, useEffect, useRef, useCallback } from "react"
 
-const API = "http://localhost:8000/dev"
+const API = "https://bolivia-bus-backend.onrender.com/dev"
 
 const CONSULTAS_RAPIDAS = [
   { label: "👥 Todos los usuarios",     query: "SELECT id, email, rol, activo FROM users;" },
@@ -571,3 +571,4 @@ export default function SqlStudio() {
     </div>
   )
 }
+
